@@ -44,9 +44,16 @@ describe("Test for checkLuhn()", function () {
     assert.isTrue(result);
   });
 
-  it("Should return true for the valid Luhn number ", function() {
+  it("Should return true for the valid Luhn number 79927398713", function() {
     var luhnNo = "79927398713";
     var result = myLuhn.checkLuhn(luhnNo);
     assert.isTrue(result);
   });
+
+  it("Should return false for the invalid Luhn number 79927398711", function() {
+    var luhnNo = "79927398711";
+    var result = myLuhn.checkLuhn(luhnNo);
+    assert.isFalse(result);
+  });
+
 });
